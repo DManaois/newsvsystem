@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\guestController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\IncidentReportController;
 
@@ -20,6 +21,13 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+
+
+//guest Routes
+Route::get('/guestabout', [guestController::class, 'guest_about'])->name('guest_about');
+Route::get('/guestviolations', [guestController::class, 'guest_violations'])->name('guest_violations');
+Route::get('/guestpolicy', [guestController::class, 'guest_policy'])->name('guest_policy');
+Route::get('/guestinterventions', [guestController::class, 'guest_interventions'])->name('guest_interventions');
 
 
 
@@ -47,7 +55,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/editstudent/{id}', [AdminController::class, 'editStudent'])->name('admin.editstudent');
     Route::put('/admin/updatestudent/{id}', [AdminController::class, 'updateStudent'])->name('admin.updatestudent');
     Route::delete('/admin/deletestudent/{id}', [AdminController::class, 'deleteStudent'])->name('admin.deletestudent');
-
 });
 
 //student_dashboard
