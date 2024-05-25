@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Dashboard</title>
+    <title>About</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/svlogo.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/about.css') }}">
 </head>
 <body>
-<div class="svg-container">
+    <div class="svg-container">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
             <defs>

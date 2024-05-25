@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Registration</title>
+    <title>Add New Student</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/svlogo.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/register.css') }}">
 </head>
 <body>
+
     <header>        
         <nav>
             <div class="logo">
@@ -22,6 +23,8 @@
         </ul>
         </nav>
     </header>
+
+    
     <h2>Add new student</h2>
     <form method="POST" action="{{ route('register') }}">
         @csrf <!-- CSRF Protection -->

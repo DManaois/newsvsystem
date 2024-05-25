@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Login</title>
+    <title>Student Violation System</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/svlogo.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
     <style>

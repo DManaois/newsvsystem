@@ -68,11 +68,11 @@
         <li><a href="{{ route('guest_violations') }}">Violations</a></li>
         <li><a href="{{ route('guest_policy') }}">Policy</a></li>
         <li><a href="{{ route('guest_interventions') }}">Intervention Programs</a></li>
-        <li><a href="{{ route('login') }}">Logout</a></li>
+        <li><a href="{{ route('login') }}">Login</a></li>
     </ul>
     </nav>
     </header>
-    <h1 style="color: white; margin-top:20px;">Welcome, Student!</h1>
+    <h1 style="color: white; margin-top:20px;">Welcome, Guest-User!</h1>
 
     <!-- Content sections for each navigation link -->
 <div class="card-container" style="margin-bottom: 20px;">
