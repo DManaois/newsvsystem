@@ -73,7 +73,6 @@
                 <li><a href="#violations">Violations</a></li>
                 <li><a href="#policy">Policy</a></li>
                 <li><a href="#intervention">Intervention Programs</a></li>
-                <li><a href="#incident">Incident Report</a></li>
             </ul>
         </nav>
     </header>
