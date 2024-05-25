@@ -80,7 +80,9 @@
 
     <h2 style="margin-top: 100px;">Sign In</h2>
     @if(session('error'))
-        <p>{{ session('error') }}</p>
+        <div class="error-message">
+            <p>{{ session('error') }}</p>
+        </div>
     @endif
     <form method="POST" action="{{ route('login') }}">
         @csrf
