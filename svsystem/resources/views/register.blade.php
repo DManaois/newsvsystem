@@ -25,7 +25,7 @@
     </header>
 
     
-    <h2>Add new student</h2>
+    <h2 style="margin-bottom: 20px;">Add new student</h2>
     <form method="POST" action="{{ route('register') }}">
         @csrf <!-- CSRF Protection -->
         <label for="name">Name:</label><br>
