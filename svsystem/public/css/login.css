@@ -190,3 +190,10 @@ header, footer {
 h2, form {
     z-index: 1; /* Ensure form content is above the SVG */
 }
+
+@media only screen and (max-width: 600px) {
+    /* Adjust font sizes, padding, margins, etc. */
+    body {
+        font-size: 14px;
+    }
+}
