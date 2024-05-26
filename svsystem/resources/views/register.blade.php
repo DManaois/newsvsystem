@@ -12,6 +12,7 @@
             <div class="logo">
                 <a href="{{ route('admin_dashboard') }}">
                 <img src="{{ asset('images/svlogo.png') }}" alt="Logo">
+                </a>
             </div>
         <ul>
             <li><a href="{{ route('about') }}">About</a></li>
@@ -26,12 +27,25 @@
 
     
     <h2 style="margin-bottom: 20px;">Add new student</h2>
+    @if(session('error'))
+        <div class="error-message">
+            <p style="    border: 1px solid red;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    width: 21%;
+    border-radius: 5px;">{{ session('error') }}</p>
+        </div>
+    @endif
     <form method="POST" action="{{ route('register') }}">
         @csrf <!-- CSRF Protection -->
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" value="{{ old('email') }}" required><br><br>
+
         <label for="student_no">Student Number:</label><br>
         <input type="text" id="student_no" name="student_no" required><br><br>
         <label for="password">Password:</label><br>

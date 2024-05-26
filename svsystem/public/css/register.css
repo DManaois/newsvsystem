@@ -154,3 +154,16 @@ svg {
     z-index: -1; /* Make sure it is behind other elements */
     overflow: hidden; /* Prevent overflow */
 }
+
+
+/* CSS for the error message */
+.error-message {
+    border: 1px solid red;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    width: 21%;
+    border-radius: 5px;
+}

@@ -22,6 +22,7 @@ class LoginController extends Controller
     }
 
     
+    
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -42,6 +43,7 @@ class LoginController extends Controller
         Session::regenerateToken();
         return redirect()->route('login')->with('error', 'Invalid email or password');
     }
+    
     
 
 

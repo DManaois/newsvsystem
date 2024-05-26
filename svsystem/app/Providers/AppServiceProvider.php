@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+
 
 
 class AppServiceProvider extends ServiceProvider
@@ -20,11 +22,12 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
 
-    public function boot()
-    {
+     public function boot()
+     {
         Validator::extend('adamson_email', function ($attribute, $value, $parameters, $validator) {
-            return strpos($value, '@adamson.edu.ph') !== false;
+            return Str::endsWith($value, '@adamson.edu.ph');
         });
-    }
+     }
+     
     
 }
