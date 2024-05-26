@@ -13,6 +13,7 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         Session::flush();
+        Session::regenerateToken(); 
         return view('login');
     }
 
