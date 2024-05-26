@@ -12,7 +12,6 @@ class LoginController extends Controller
 {
     public function showLoginForm()
     {
-        Session::flush();
         Session::regenerateToken(); 
         return view('login');
     }
@@ -22,14 +21,13 @@ class LoginController extends Controller
         return view('loginstudent'); 
     }
 
+    
     public function login(Request $request)
     {
-        
         $credentials = $request->only('email', 'password');
-
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-
+    
             if ($user->role === 'admin') {
                 return redirect()->route('admin_dashboard');
             } elseif ($user->role === 'student') {
@@ -39,9 +37,13 @@ class LoginController extends Controller
                 return redirect()->back()->with('error', 'Invalid role');
             }
         }
-
-        return redirect()->back()->with('error', 'Invalid email or password');
+    
+        // If login attempt was unsuccessful, regenerate the CSRF token and return to login page with error
+        Session::regenerateToken();
+        return redirect()->route('login')->with('error', 'Invalid email or password');
     }
+    
+
 
     public function loginstudent(Request $request)
     {
@@ -62,8 +64,7 @@ class LoginController extends Controller
         return redirect()->back()->with('error', 'Invalid email or password');
     }
 
-    
-    
+
 
     public function logout()
     {

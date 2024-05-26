@@ -5,11 +5,6 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('images/svlogo.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        /* Inline CSS for the SVG background */
-    
-    </style>
 </head>
 <body>
     <div class="svg-container">
