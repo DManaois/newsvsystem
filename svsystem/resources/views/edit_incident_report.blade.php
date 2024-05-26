@@ -14,6 +14,7 @@
                 <img src="{{ asset('images/svlogo.png') }}" alt="Logo">
             </div>
         <ul>
+            <li><a href="https://webframeworksproject.online/">Home</a></li>
             <li><a href="{{ route('about') }}">About</a></li>
             <li><a href="{{ route('admin.liststudents') }}">Students</a></li>
             <li><a href="{{ route('violations') }}">Violations</a></li>

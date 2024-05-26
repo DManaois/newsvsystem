@@ -66,6 +66,7 @@
             <img src="{{ asset('images/svlogo.png') }}" alt="Logo">
         </div>
     <ul>
+        <li><a href="https://webframeworksproject.online/">Home</a></li>
         <li><a href="{{ route('student_about') }}">About</a></li>
         <li><a href="{{ route('profile', ['id' => Auth::user()->id]) }}">My Profile</a></li>
         <li><a href="{{ route('student_violations') }}">Violations</a></li>

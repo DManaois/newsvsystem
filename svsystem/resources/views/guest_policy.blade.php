@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/about.css') }}">
 </head>
 <body>
-
 <div class="svg-container">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
@@ -66,6 +65,7 @@
             <img src="{{ asset('images/svlogo.png') }}" alt="Logo">
         </div>
     <ul>
+        <li><a href="https://webframeworksproject.online/">Home</a></li>
         <li><a href="{{ route('guest_about') }}">About</a></li>
         <li><a href="{{ route('guest_violations') }}">Violations</a></li>
         <li><a href="{{ route('guest_policy') }}">Policy</a></li>

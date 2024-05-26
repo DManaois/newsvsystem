@@ -5,6 +5,11 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('images/svlogo.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Inline CSS for the SVG background */
+    
+    </style>
 </head>
 <body>
     <div class="svg-container">
@@ -66,6 +71,7 @@
                 <img src="{{ asset('images/svlogo.png') }}" alt="Logo">
             </div>
             <ul>
+                <li><a href="https://webframeworksproject.online/">Home</a></li>
                 <li><a href="{{ route('guest_about') }}">About</a></li>
                 <li><a href="{{ route('guest_violations') }}">Violations</a></li>
                 <li><a href="{{ route('guest_policy') }}">Policy</a></li>
