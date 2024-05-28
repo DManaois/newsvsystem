@@ -20,7 +20,7 @@
             <li><a href="{{ route('violations') }}">Violations</a></li>
             <li><a href="{{ route('policy') }}">Policy</a></li>
             <li><a href="{{ route('interventions') }}">Intervention Programs</a></li>
-            <li><a href="{{ route('login') }}">Logout</a></li>
+            <li><a href="{{ route('logout') }}">Logout</a></li>
         </ul>
         </nav>
     </header>   

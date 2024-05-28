@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
-    public function showLoginForm()
+     public function showLoginForm()
     {
+
         Session::regenerateToken(); 
         return view('login');
     }
@@ -22,9 +23,9 @@ class LoginController extends Controller
     }
 
     
-    
     public function login(Request $request)
     {
+
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
@@ -43,9 +44,6 @@ class LoginController extends Controller
         Session::regenerateToken();
         return redirect()->route('login')->with('error', 'Invalid email or password');
     }
-    
-    
-
 
     public function loginstudent(Request $request)
     {
@@ -66,6 +64,8 @@ class LoginController extends Controller
         return redirect()->back()->with('error', 'Invalid email or password');
     }
 
+    
+    
 
 
     public function logout()

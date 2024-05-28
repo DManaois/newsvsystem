@@ -72,7 +72,7 @@
         <li><a href="{{ route('student_violations') }}">Violations</a></li>
         <li><a href="{{ route('student_policy') }}">Policy</a></li>
         <li><a href="{{ route('student_interventions') }}">Intervention Programs</a></li>
-        <li><a href="{{ route('login') }}">Logout</a></li>
+        <li><a href="{{ route('logout') }}">Logout</a></li>
     </ul>
     </nav>
     </header>

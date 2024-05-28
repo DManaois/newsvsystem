@@ -28,9 +28,9 @@
 
     @if($student)
     
-        <h3>Name: {{ $student->name }}</h3>
-        <p style="margin-left: 600px;">Student Number: {{ $student->student_no }}</p>   
-        <p style="margin-left: 600px;">Email: {{ $student->email }}</p>
+        <h3 style="margin-left: auto; margin-right: auto; text-align: center;">Name: {{ $student->name }}</h3>
+        <p style="text-align:center;">Student Number: {{ $student->student_no }}</p>   
+        <p style="text-align:center;">Email: {{ $student->email }}</p>
         <div class="buttons-container">
             <button><a href="{{ route('admin.editstudent', ['id' => $student->id]) }}">Edit</a></button>
         <form method="POST" action="{{ route('admin.deletestudent', ['id' => $student->id]) }}" onsubmit="return confirm('Are you sure you want to delete this student?');">
@@ -72,7 +72,7 @@
     </div>
 
     
-    <footer>
+    <footer style="position: relative;">
         <p>&copy; {{ date('Y') }} Adamson University. All Rights Reserved.</p>
     </footer>
 </body>

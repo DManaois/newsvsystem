@@ -20,7 +20,7 @@
             <li><a href="{{ route('violations') }}">Violations</a></li>
             <li><a href="{{ route('policy') }}">Policy</a></li>
             <li><a href="{{ route('interventions') }}">Intervention Programs</a></li>
-            <li><a href="{{ route('login') }}">Logout</a></li>
+            <li><a href="{{ route('logout') }}">Logout</a></li>
         </ul>
         </nav>
     </header>
@@ -68,7 +68,7 @@
         <input type="submit" value="Update">
     </form>
     
-    <button onclick="goBack()">Go Back</button>
+    <button style="display: block;margin:auto; margin-bottom:20px; margin-top:20px;" onclick="goBack()">Go Back</button>
 
     <script>
     function goBack() {

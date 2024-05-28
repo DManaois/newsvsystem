@@ -156,8 +156,7 @@ svg {
 }
 
 
-/* CSS for the error message */
-.error-message {
+.error-message p{
     border: 1px solid red;
     background-color: #f8d7da;
     color: #721c24;
