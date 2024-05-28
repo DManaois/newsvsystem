@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\guestController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\IncidentReportController;
+use App\Http\Controllers\ExternalAPIController;
 
 
 Route::get('/', function () {
@@ -36,6 +37,14 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register']);
 
 //admin_dashboard Routes
+
+Route::group(['middleware' => 'with_ext_api_key', 'prefix' => 'get'], function () {
+    Route::get('/users', [ExternalAPIController::class, 'getsvsytem']);
+    Route::match(['post', 'get'], '/login', [ExternalAPIController::class, 'authenticateWithKey']);
+});
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin_dashboard');

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
+use Closure;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class LoginController extends Controller
 {
@@ -66,7 +69,19 @@ class LoginController extends Controller
 
     
     
+    public function handle(Request $request, Closure $next): Response
+    {
+        $apikey = config('app.ext_api_key');
 
+        $apiKeyIsValid = (
+            !empty ($apikey)
+            && $request -> header('x-api-key') == $apikey
+        );
+
+        abort_if (! $apiKeyIsValid, 403, 'Access Denied');
+
+        return $next($request);
+    }
 
     public function logout()
     {
